@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>local.munki.Adobe Substance 3D Painter 2022 Import</string>
+	<string>supportplan.Adobe Substance 3D Painter 2022 Import</string>
 	<key>Input</key>
 	<dict>
 		<key>MINIMUM_OS_VERSION</key>
