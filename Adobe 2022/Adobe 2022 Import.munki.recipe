@@ -13,7 +13,7 @@
             <key>force_munkiimport</key>
             <true/>
             <key>MINIMUM_OS_VERSION</key>
-            <string>10.14.0</string>
+            <string>10.15.0</string>
             <key>MUNKI_CATEGORY</key>
             <string>Applications</string>
             <key>MUNKI_DESCRIPTION</key>
