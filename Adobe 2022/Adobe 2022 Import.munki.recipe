@@ -7,7 +7,7 @@
         Please Review the changes to this recipe here
         https://github.com/autopkg/dataJAR-recipes/blob/master/Adobe%202022/README.md</string>
         <key>Identifier</key>
-        <string>supportplan.munki.Import Adobe 2022 Title</string>
+        <string>com.github.dataJAR-recipes.munki.Import Adobe 2022 Title</string>
         <key>Input</key>
         <dict>
             <key>force_munkiimport</key>
