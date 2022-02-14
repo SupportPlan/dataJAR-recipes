@@ -15,7 +15,7 @@
             <key>MINIMUM_OS_VERSION</key>
             <string>10.15.0</string>
             <key>MUNKI_CATEGORY</key>
-            <string>Applications</string>
+            <string>AdobeCC</string>
             <key>MUNKI_DESCRIPTION</key>
             <string>Some description.</string>
             <key>MUNKI_DEVELOPER</key>

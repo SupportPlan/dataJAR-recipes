@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Identifier</key>
+	<string>local.munki.Adobe Bridge 2022 Import</string>
+	<key>Input</key>
+	<dict>
+		<key>MINIMUM_OS_VERSION</key>
+		<string>10.15.0</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>AdobeCC</string>
+		<key>MUNKI_DESCRIPTION</key>
+		<string>Adobe Bridge is a free digital asset management app made by Adobe Inc. and first released with Adobe Creative Suite 2.</string>
+		<key>MUNKI_DEVELOPER</key>
+		<string>Adobe</string>
+		<key>MUNKI_NAME</key>
+		<string>Adobe Bridge 2022</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>custom/%MUNKI_DEVELOPER%/%NAME%</string>
+		<key>NAME</key>
+		<string>AdobeBridge2022</string>
+		<key>force_munkiimport</key>
+		<true/>
+		<key>pkginfo</key>
+		<dict>
+			<key>RestartAction</key>
+			<string>RequireLogout</string>
+			<key>catalogs</key>
+			<array>
+				<string>custom</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>%MUNKI_DESCRIPTION%</string>
+			<key>developer</key>
+			<string>%MUNKI_DEVELOPER%</string>
+			<key>name</key>
+			<string>%MUNKI_NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>ParentRecipe</key>
+	<string>com.github.dataJAR-recipes.munki.Import Adobe 2022 Title</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>Adobe2022Versioner</key>
+			<dict>
+				<key>path</key>
+				<string>/Users/Shared/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Adobe 2022/Adobe2022Versioner.py</string>
+				<key>sha256_hash</key>
+				<string>8b0a6deb174c845a117bffb099c07f47e17a461d0b707541411885be82a7040d</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.dataJAR-recipes.munki.Import Adobe 2022 Title</key>
+			<dict>
+				<key>git_hash</key>
+				<string>28e094996f960a84e41821162cade06d7a8e67bc</string>
+				<key>path</key>
+				<string>/Users/Shared/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Adobe 2022/Adobe 2022 Import.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>4f1547579470625de46411385ddbdce276c69ccba3d791275642b345dc55799c</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
