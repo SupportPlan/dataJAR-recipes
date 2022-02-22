@@ -463,10 +463,10 @@ class Adobe2022Versioner(Processor):
             self.env['app_version'] = load_json['CodexVersion']
             self.env['app_bundle_id'] = 'com.adobe.stager'
         elif self.env['sap_code'] == 'PPRO':
-            self.env['app_version'] = load_json['CodexVersion']
+            self.env['app_version'] = load_json['ProductVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobepremierepro'
         elif self.env['sap_code'] == 'AME':
-            self.env['app_version'] = load_json['CodexVersion']
+            self.env['app_version'] = load_json['ProductVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobemediaencoder'
         elif self.env['sap_code'] == 'AUDT':
             self.env['app_version'] = load_json['ProductVersion']
