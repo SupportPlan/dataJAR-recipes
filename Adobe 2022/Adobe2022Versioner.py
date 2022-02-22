@@ -465,6 +465,9 @@ class Adobe2022Versioner(Processor):
         elif self.env['sap_code'] == 'PPRO':
             self.env['app_version'] = load_json['CodexVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobepremierepro'
+        elif self.env['sap_code'] == 'AME':
+            self.env['app_version'] = load_json['CodexVersion']
+            self.env['app_bundle_id'] = 'com.adobe.adobemediaencoder'
         else:
             raise ProcessorError("Checking app_json for version details but sap code {}, "
                                  "is not within the known list of apps which we know to "
