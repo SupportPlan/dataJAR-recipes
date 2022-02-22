@@ -469,7 +469,7 @@ class Adobe2022Versioner(Processor):
             self.env['app_version'] = load_json['CodexVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobemediaencoder'
         elif self.env['sap_code'] == 'AUDT':
-            self.env['app_version'] = load_json['CodexVersion']
+            self.env['app_version'] = load_json['ProductVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobeaudition'
         else:
             raise ProcessorError("Checking app_json for version details but sap code {}, "
