@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>supportplan.Adobe Charicter Animator 2022 Import</string>
+	<string>supportplan.Adobe Character Animator 2022 Import</string>
 	<key>Input</key>
 	<dict>
 		<key>MINIMUM_OS_VERSION</key>
@@ -15,11 +15,11 @@
 		<key>MUNKI_DEVELOPER</key>
 		<string>Adobe</string>
 		<key>MUNKI_NAME</key>
-		<string>Adobe Charicter Animator 2022</string>
+		<string>Adobe Character Animator 2022</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>custom/%MUNKI_DEVELOPER%/%NAME%</string>
 		<key>NAME</key>
-		<string>AdobeCharicterAnimator2022</string>
+		<string>AdobeCharacterAnimator2022</string>
 		<key>force_munkiimport</key>
 		<true/>
 		<key>pkginfo</key>
