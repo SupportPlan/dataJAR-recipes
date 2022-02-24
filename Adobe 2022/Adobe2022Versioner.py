@@ -474,6 +474,9 @@ class Adobe2022Versioner(Processor):
         elif self.env['sap_code'] == 'LRCC':
             self.env['app_version'] = load_json['ProductVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobelightroom'
+        elif self.env['sap_code'] == 'AEFT':
+            self.env['app_version'] = load_json['ProductVersion']
+            self.env['app_bundle_id'] = 'com.adobe.adobeaftereffects'
         else:
             raise ProcessorError("Checking app_json for version details but sap code {}, "
                                  "is not within the known list of apps which we know to "
