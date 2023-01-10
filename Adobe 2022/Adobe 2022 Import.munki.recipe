@@ -5,15 +5,15 @@
         <key>Description</key>
         <string>Import a Creative Cloud Application's pkg into Munki
         Please Review the changes to this recipe here
-        https://github.com/autopkg/dataJAR-recipes/blob/master/Adobe%202022/README.md</string>
+        https://github.com/autopkg/dataJAR-recipes/blob/master/Adobe%202023/README.md</string>
         <key>Identifier</key>
-        <string>com.github.dataJAR-recipes.munki.Import Adobe 2022 Title</string>
+        <string>com.github.dataJAR-recipes.munki.Import Adobe 2023 Title</string>
         <key>Input</key>
         <dict>
             <key>force_munkiimport</key>
             <true/>
             <key>MINIMUM_OS_VERSION</key>
-            <string>10.15.0</string>
+            <string>11.0.0</string>
             <key>MUNKI_CATEGORY</key>
             <string>AdobeCC</string>
             <key>MUNKI_DESCRIPTION</key>
@@ -21,9 +21,9 @@
             <key>MUNKI_DEVELOPER</key>
             <string>Adobe</string>
             <key>MUNKI_NAME</key>
-            <string>SomeAdobe2022Title</string>
+            <string>SomeAdobe2023Title</string>
             <key>NAME</key>
-            <string>SomeAdobe2022Title - must match package name</string>
+            <string>SomeAdobe2023Title - must match package name</string>
             <key>MUNKI_REPO_SUBDIR</key>
             <string>%MUNKI_CATEGORY%/%MUNKI_DEVELOPER%/%NAME%</string>
             <key>pkginfo</key>
@@ -50,7 +50,7 @@
         <array>
             <dict>
                 <key>Processor</key>
-                <string>Adobe2022Versioner</string>
+                <string>Adobe2023Versioner</string>
             </dict>
             <dict>
                 <key>Processor</key>
