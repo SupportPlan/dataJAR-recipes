@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>supportplan.Adobe Premiere Pro 2023 Import</string>
+	<string>supportplan.Adobe Premiere Pro 2022 Import</string>
 	<key>Input</key>
 	<dict>
 		<key>MINIMUM_OS_VERSION</key>
-		<string>11.0.0</string>
+		<string>10.15.0</string>
 		<key>MUNKI_CATEGORY</key>
 		<string>AdobeCC</string>
 		<key>MUNKI_DESCRIPTION</key>
@@ -15,11 +15,11 @@
 		<key>MUNKI_DEVELOPER</key>
 		<string>Adobe</string>
 		<key>MUNKI_NAME</key>
-		<string>Adobe Premiere Pro 2023</string>
+		<string>Adobe Premiere Pro 2022</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>custom/%MUNKI_DEVELOPER%/%NAME%</string>
 		<key>NAME</key>
-		<string>AdobePremierePro2023</string>
+		<string>AdobePremierePro2022</string>
 		<key>force_munkiimport</key>
 		<true/>
 		<key>pkginfo</key>
@@ -45,27 +45,27 @@
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.dataJAR-recipes.munki.Import Adobe 2023 Title</string>
+	<string>com.github.dataJAR-recipes.munki.Import Adobe 2022 Title</string>
 	<key>ParentRecipeTrustInfo</key>
 	<dict>
 		<key>non_core_processors</key>
 		<dict>
-			<key>Adobe2023Versioner</key>
+			<key>Adobe2022Versioner</key>
 			<dict>
 				<key>path</key>
-				<string>/Users/Shared/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Adobe 2023/Adobe2023Versioner.py</string>
+				<string>/Users/Shared/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Adobe 2022/Adobe2022Versioner.py</string>
 				<key>sha256_hash</key>
 				<string>8b0a6deb174c845a117bffb099c07f47e17a461d0b707541411885be82a7040d</string>
 			</dict>
 		</dict>
 		<key>parent_recipes</key>
 		<dict>
-			<key>com.github.dataJAR-recipes.munki.Import Adobe 2023 Title</key>
+			<key>com.github.dataJAR-recipes.munki.Import Adobe 2022 Title</key>
 			<dict>
 				<key>git_hash</key>
 				<string>28e094996f960a84e41821162cade06d7a8e67bc</string>
 				<key>path</key>
-				<string>/Users/Shared/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Adobe 2023/Adobe 2023 Import.munki.recipe</string>
+				<string>/Users/Shared/AutoPkg/RecipeRepos/com.github.autopkg.dataJAR-recipes/Adobe 2022/Adobe 2022 Import.munki.recipe</string>
 				<key>sha256_hash</key>
 				<string>4f1547579470625de46411385ddbdce276c69ccba3d791275642b345dc55799c</string>
 			</dict>

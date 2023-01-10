@@ -28,7 +28,7 @@ SUPPORT FOR THIS PROGRAM
 
 DESCRIPTION
 
-Imports Adobe 2023 titles found in running users ~/Downloads
+Imports Adobe 2022 titles found in running users ~/Downloads
 
 '''
 
@@ -49,32 +49,32 @@ __version__ = '1.2'
 # Functions
 def main():
     '''
-        Look within DOWNLOADS_PATH for Adobe*2023* items, add to adobe_folders list if found
+        Look within DOWNLOADS_PATH for Adobe*2022* items, add to adobe_folders list if found
     '''
 
     # Progress notification
-    print("Looking for {} folders ...".format(os.path.join(DOWNLOADS_PATH, 'Adobe*2023*')))
+    print("Looking for {} folders ...".format(os.path.join(DOWNLOADS_PATH, 'Adobe*2022*')))
 
     # Create empty list
     adobe_folders = []
 
-    # Look within DOWNLOADS_PATH for Adobe*2023 items, add to adobe_folders list if found
+    # Look within DOWNLOADS_PATH for Adobe*2022 items, add to adobe_folders list if found
     for some_item in os.listdir(DOWNLOADS_PATH):
         some_path = os.path.join(DOWNLOADS_PATH, some_item)
         if os.path.isdir(some_path):
-            if some_item.startswith('Adobe') and '2023' in (some_item):
+            if some_item.startswith('Adobe') and '2022' in (some_item):
                 adobe_folders.append(some_item)
 
     # If no folders are found, exit
     if not adobe_folders:
-        print("No Adobe*2023 folders found in {}, exiting...".format(DOWNLOADS_PATH))
+        print("No Adobe*2022 folders found in {}, exiting...".format(DOWNLOADS_PATH))
         sys.exit(1)
 
     # If 1 or moe folders are found, notify and proceed.
     if len(adobe_folders) == 1:
-        print("1 Adobe 2023 folder found, creating recipe list...")
+        print("1 Adobe 2022 folder found, creating recipe list...")
     else:
-        print("{} Adobe 2023 folder found, creating recipe list...".format(len(adobe_folders)))
+        print("{} Adobe 2022 folder found, creating recipe list...".format(len(adobe_folders)))
 
     # Check for pkg's
     pkg_checker(sorted(adobe_folders))
@@ -125,7 +125,7 @@ def pkg_checker(adobe_folders):
 
     # If we did not find any pkg pairs to import
     if found_pkgs == 0:
-        print("ERROR: No Adobe 2023 pkg pairs found, exiting...")
+        print("ERROR: No Adobe 2022 pkg pairs found, exiting...")
         sys.exit(1)
     # Else, run the recipe list ADOBE_LIST
     else:
@@ -189,8 +189,8 @@ if __name__ == '__main__':
 
     # Constants
     DOWNLOADS_PATH = os.path.expanduser('~/Downloads/')
-    ADOBE_LIST = os.path.join(DOWNLOADS_PATH + 'adobe2023_list.txt')
-    REPORT_PATH = os.path.join(DOWNLOADS_PATH + 'adobe2023_report.plist')
+    ADOBE_LIST = os.path.join(DOWNLOADS_PATH + 'adobe2022_list.txt')
+    REPORT_PATH = os.path.join(DOWNLOADS_PATH + 'adobe2022_report.plist')
 
     # Call main def
     main()

@@ -1,7 +1,7 @@
 #!/usr/local/autopkg/python
 # pylint: disable = invalid-name
 '''
-Copyright (c) 2023, dataJAR Ltd.  All rights reserved.
+Copyright (c) 2022, dataJAR Ltd.  All rights reserved.
      Redistribution and use in source and binary forms, with or without
      modification, are permitted provided that the following conditions are met:
              * Redistributions of source code must retain the above copyright
@@ -29,7 +29,7 @@ SUPPORT FOR THIS PROGRAM
 
 DESCRIPTION
 
-See docstring for AdobeCC2023Versioner class
+See docstring for AdobeCC2022Versioner class
 
 '''
 
@@ -53,14 +53,14 @@ from autopkglib import Processor, ProcessorError
 
 
 # Define class
-__all__ = ['Adobe2023Versioner']
+__all__ = ['Adobe2022Versioner']
 __version__ = ['1.4.10']
 
 
 # Class def
-class Adobe2023Versioner(Processor):
+class Adobe2022Versioner(Processor):
     '''
-       Parses generated Adobe Admin Console 2023 pkgs for
+       Parses generated Adobe Admin Console 2022 pkgs for
        detailed application path and bundle version info.
     '''
 
@@ -323,10 +323,10 @@ class Adobe2023Versioner(Processor):
         self.output("installed_path: {}".format(self.env['installed_path']))
 
         # Get display_name
-        if not self.env['app_path'].endswith('CC') and not self.env['app_path'].endswith('2023'):
-            self.env['display_name'] = self.env['app_path'] + ' 2023'
-        elif self.env['app_path'].endswith('CC') and not self.env['app_path'].endswith('2023'):
-            self.env['display_name'] = self.env['app_path'] + ' 2023'
+        if not self.env['app_path'].endswith('CC') and not self.env['app_path'].endswith('2022'):
+            self.env['display_name'] = self.env['app_path'] + ' 2022'
+        elif self.env['app_path'].endswith('CC') and not self.env['app_path'].endswith('2022'):
+            self.env['display_name'] = self.env['app_path'] + ' 2022'
         else:
             self.env['display_name'] = self.env['app_path']
 
@@ -430,7 +430,7 @@ class Adobe2023Versioner(Processor):
             self.env['app_bundle_id'] = 'com.adobe.dimension'
         elif self.env['sap_code'] == 'FLPR':
             self.env['app_version'] = load_json['CodexVersion']
-            self.env['app_bundle_id'] = 'com.adobe.Adobe-Animate-2023.application'
+            self.env['app_bundle_id'] = 'com.adobe.Adobe-Animate-2022.application'
         elif self.env['sap_code'] == 'IDSN':
             self.env['app_version'] = load_json['ProductVersion']
             self.env['app_bundle_id'] = 'com.adobe.InDesign'
@@ -539,4 +539,4 @@ class Adobe2023Versioner(Processor):
 
 
 if __name__ == '__main__':
-    PROCESSOR = Adobe2023Versioner()
+    PROCESSOR = Adobe2022Versioner()
