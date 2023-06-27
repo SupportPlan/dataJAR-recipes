@@ -477,6 +477,9 @@ class Adobe2023Versioner(Processor):
         elif self.env['sap_code'] == 'AEFT':
             self.env['app_version'] = load_json['ProductVersion']
             self.env['app_bundle_id'] = 'com.adobe.adobeaftereffects'
+        elif self.env['sap_code'] == 'PHSPBETA':
+            self.env['app_version'] = load_json['CodexVersion']
+            self.env['app_bundle_id'] = 'com.adobe.Photoshopbeta'
         else:
             raise ProcessorError("Checking app_json for version details but sap code {}, "
                                  "is not within the known list of apps which we know to "
