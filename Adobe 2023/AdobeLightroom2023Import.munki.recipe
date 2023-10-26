@@ -42,6 +42,35 @@
 			<false/>
 			<key>unattended_uninstall</key>
 			<true/>
+			<key>installcheck_script</key>
+			<string>#!/bin/bash
+
+AN=Lightroom
+RD=CC
+VN=
+PV=LTRM
+
+AL=/Applications/Adobe\ $AN\ $RD/Adobe\ $AN.app/Contents/Info.plist
+
+if [ -f "$AL" ]; then
+  CV=$(/usr/libexec/PlistBuddy -c "Print :Adobe\ Product\ Version" "$AL")
+	if [[ "$CV" &lt; "$VN" ]]; then
+		if /usr/local/bin/RemoteUpdateManager --productVersions=$PV; then
+			exit 1
+			else
+				exit 1
+				fi
+				else
+					exit 1
+					fi
+					else
+						exit 0
+					fi</string>
+			<key>postinstall_script</key>
+			<string>#!/bin/bash
+				if [ -f /Library/Scripts/SupportPlan/AdobeAppsOn ]; then
+					echo "&lt;config&gt;&lt;panel&gt;&lt;name&gt;AppsPanel&lt;/name&gt;&lt;visible&gt;true&lt;/visible&gt;&lt;/panel&gt;&lt;feature&gt;&lt;name&gt;SelfServeInstalls&lt;/name&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/feature&gt;&lt;/config&gt;" &gt; /Library/Application\ Support/Adobe/OOBE/Configs/ServiceConfig.xml
+				fi</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
