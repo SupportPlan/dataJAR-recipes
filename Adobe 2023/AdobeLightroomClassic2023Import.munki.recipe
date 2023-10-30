@@ -68,6 +68,7 @@ fi
 			</string>
 			<key>postinstall_script</key>
 			<string>#!/bin/bash
+
 AE="/Library/Scripts/SupportPlan/CustomServiceConfig.xml"
 SC="/Library/Application Support/Adobe/OOBE/Configs/ServiceConfig.xml"
 
