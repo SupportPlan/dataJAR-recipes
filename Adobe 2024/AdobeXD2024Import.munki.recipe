@@ -75,7 +75,22 @@ SC="/Library/Application Support/Adobe/OOBE/Configs/ServiceConfig.xml"
 if [ -f $AE ]; then
 	cp "$AE" "$SC"
 fi
-			</string>
+
+for i in /Applications/Adobe*
+do
+  if [ -d "$i/Presets" ]
+  then
+    chmod -R 777 "$i/Presets" 
+  else
+    for j in "$i"/*
+    do
+      if [ -d "$j/Presets" ]
+      then
+        chmod -R 777 "$j/Presets"
+      fi
+    done
+  fi
+done</string>
 		</dict>
 	</dict>
 	<key>ParentRecipe</key>
